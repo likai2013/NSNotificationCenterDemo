@@ -19,6 +19,8 @@
 		CBC0A7F6184DC0A400A67450 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC0A7DE184DC0A400A67450 /* UIKit.framework */; };
 		CBC0A7FE184DC0A400A67450 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBC0A7FC184DC0A400A67450 /* InfoPlist.strings */; };
 		CBC0A800184DC0A400A67450 /* NSNotificationCenterDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC0A7FF184DC0A400A67450 /* NSNotificationCenterDemoTests.m */; };
+		CBC0A80B184DC11400A67450 /* LYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC0A80A184DC11400A67450 /* LYViewController.m */; };
+		CBC0A80E184DC27600A67450 /* MyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC0A80D184DC27600A67450 /* MyButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		CBC0A7FB184DC0A400A67450 /* NSNotificationCenterDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSNotificationCenterDemoTests-Info.plist"; sourceTree = "<group>"; };
 		CBC0A7FD184DC0A400A67450 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CBC0A7FF184DC0A400A67450 /* NSNotificationCenterDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSNotificationCenterDemoTests.m; sourceTree = "<group>"; };
+		CBC0A809184DC11400A67450 /* LYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYViewController.h; sourceTree = "<group>"; };
+		CBC0A80A184DC11400A67450 /* LYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYViewController.m; sourceTree = "<group>"; };
+		CBC0A80C184DC27600A67450 /* MyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyButton.h; sourceTree = "<group>"; };
+		CBC0A80D184DC27600A67450 /* MyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,10 @@
 			children = (
 				CBC0A7E9184DC0A400A67450 /* AppDelegate.h */,
 				CBC0A7EA184DC0A400A67450 /* AppDelegate.m */,
+				CBC0A80C184DC27600A67450 /* MyButton.h */,
+				CBC0A80D184DC27600A67450 /* MyButton.m */,
+				CBC0A809184DC11400A67450 /* LYViewController.h */,
+				CBC0A80A184DC11400A67450 /* LYViewController.m */,
 				CBC0A7EC184DC0A400A67450 /* Images.xcassets */,
 				CBC0A7E1184DC0A400A67450 /* Supporting Files */,
 			);
@@ -241,6 +251,8 @@
 			files = (
 				CBC0A7EB184DC0A400A67450 /* AppDelegate.m in Sources */,
 				CBC0A7E7184DC0A400A67450 /* main.m in Sources */,
+				CBC0A80B184DC11400A67450 /* LYViewController.m in Sources */,
+				CBC0A80E184DC27600A67450 /* MyButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

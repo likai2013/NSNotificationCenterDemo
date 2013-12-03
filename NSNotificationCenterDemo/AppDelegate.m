@@ -7,16 +7,59 @@
 //
 
 #import "AppDelegate.h"
+#import "MyButton.h"
+#import "LYViewController.h"
 
 @implementation AppDelegate
+
+/**
+ *  通知的简单用法,改变视图的颜色
+ *
+ *  @param application   更改应用的主题
+ *  @param launchOptions
+ *
+ *  @return blackColor
+ */
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    _viewController = [[UIViewController alloc]init];
+    _viewController.view.backgroundColor = [UIColor whiteColor];
+    
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:_viewController];
+    self.window.rootViewController = nav;
+    _viewController.title = @"第一个视图";
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(changeViewBackground:) name:@"changeViewBackgroundColor" object:nil];
+    
+    MyButton *button = [[MyButton alloc]initWithFrame:CGRectMake(20, 90, 200, 30)];
+    [_viewController.view addSubview:button];
+    [button addTarget:self action:@selector(pushNextView) forControlEvents:UIControlEventTouchUpInside];
+    
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(void)changeViewBackground:(NSNotification *)obj
+{
+    NSString *color = [obj object];
+    
+    if ([color isEqualToString:@"blackColor"]) {
+        _viewController.view.backgroundColor = [UIColor blackColor];
+    }
+}
+
+-(void)pushNextView
+{
+    LYViewController *view = [[LYViewController alloc]init];
+    
+    view.view.backgroundColor = _viewController.view.backgroundColor;
+    
+    [_viewController.navigationController pushViewController:view animated:YES];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
